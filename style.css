@@ -1,0 +1,331 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Roboto Mono';
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1em;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border-radius: 5px;
+}
+.navbar a:hover {
+    background-color: #575757;
+}
+
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.411)), url('./images/orphans.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.container {
+width: 90%;
+height: 100%;
+max-width: 1000px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.container .info h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.container .info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.container .info p{
+    font-size: 1.2rem;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.container .info a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #fff;  
+    border-radius: 5px; 
+    font-size: 1.8rem;
+    padding: 0.5em 2em;
+    margin-top: 2rem;
+}
+
+/* About Page  */
+
+#about-page {
+    padding: 2em;
+}
+
+.our-story, .mission-vision, .what-we-do, .cta {
+    margin: 2em 0;
+    padding: 1em;
+    background: #f1f1f1;
+    border-radius: 8px;
+} 
+
+
+.cta h2 {
+    margin: 2em 0;
+}
+.cta a {
+    background-color: #007BFF;
+    padding: 1em 2em;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+.cta a:hover {
+    background-color: #0056b3;
+}
+
+
+  /* Gallery Section Styling */
+
+#gallery {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  #gallery h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  #gallery p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Flexbox for the Gallery */
+  .gallery-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  /* Gallery Items */
+  .gallery-item {
+    position: relative;
+    width: calc(33.333% - 20px); /* Adjust for three items per row */
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Images */
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Overlay Text */
+  .gallery-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Hover Effects */
+  .gallery-item:hover img {
+    transform: scale(1.1); /* Zoom effect */
+  }
+  
+  .gallery-item:hover .overlay {
+    opacity: 1; /* Show overlay */
+  }
+  
+  /* Lightbox */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .lightbox.active {
+    display: flex;
+  }
+  
+
+/* Donations Page  */
+
+#donations {
+    text-align: center;
+    padding: 2em;
+}
+.donate {
+    background: #f9f9f9;
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.donate h1 {
+    font-size: 2.5rem;
+    color: #007BFF;
+}
+
+.donate p {
+    font-size: 1.2rem;
+    color: #555;
+    padding: 2rem;
+}
+
+.donate-now {
+    background: #ff7043;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.donate-now:hover {
+    background: #ff5722;
+}
+
+.impact {
+    margin: 2rem 0;
+}
+
+.impact h2 {
+    padding: 2rem;
+    font-size: 2.5rem;
+}
+
+.impact-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.impact-item {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* width: 200px; */
+    width: 80%;
+}
+
+.impact-item h3 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    padding: 2rem;
+}
+
+.impact-item p {
+    font-size: 1rem;
+    color: #555;
+    padding: 2rem;
+}
+
+.donation-form h2 {
+    padding: 2rem;
+    font-size: 2.5rem;
+}
+
+.donation-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.donation-form input, .donation-form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.donation-form button {
+    background: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+.donation-form button:hover {
+    background: #0056b3;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 10px; 
+    }
+    .gallery-item {
+        width: calc(50% - 10px); /* Two items per row */
+      }
+}
+  
+  @media (max-width: 480px) {
+    .gallery-item {
+      width: 100%; /* One item per row */
+    }
+  }
+  

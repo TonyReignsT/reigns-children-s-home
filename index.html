@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reigns orphanage</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navigation Bar  -->
+    <nav class="navbar">
+        <a href="#hero">Home</a>
+        <a href="#about-page">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#donations">Donations</a>
+        <a href="#">Volunteer</a>
+        <a href="#">Contacts</a>
+    </nav>
+    <section id="hero">
+        <div class="container">
+            <div class="info">
+                <h1>Welcome to Reigns Children's Home</h1>
+                <p>Creating a safe and nurturing environment for children to grow and thrive.</p>
+                <a href="#form">Donations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section  -->
+
+    <section id="about-page">
+        <!-- Our Story  -->
+        <div class="our-story">
+            <h2>Our Story</h2>
+            <p>Reigns Children's home was founded in 2010 with the vision of providing vulnerable children a safe space where they can grow with dignity and love.</p>
+        </div>
+
+        <!-- Mission and Vision  -->
+         <div class="mission-vision">
+            <h2>Our Mission & Vision</h2>
+            <p><strong>Mission:</strong> To narture, educate, and empower vulnerable children.</p>
+            <p><strong>Vision:</strong> A world where every child has a safe and loving home.</p>
+         </div>
+
+         <!-- What we do  -->
+          <div class="what-we-do">
+            <h2>What We Do</h2>
+            <ul>
+                <li>Provide education and life skills training.</li>
+                <li>Offer counselling and healthcare</li>
+                <li>Organize recreational and cultural activities.</li>
+            </ul>
+          </div>
+
+          <!-- Call to Action  -->
+           <div class="cta">
+            <h2>Join Us in Making a Difference</h2>
+            <a href="#form">Donate Now</a> 
+            <a href="#">Volunteer</a> 
+           </div>
+    </section>
+
+    <!-- Gallery  -->
+
+    <section id="gallery">
+        <h2>Our Gallery</h2>
+        <p>Explore moments from our Children's home.</p>  
+        <div class="gallery-flex">
+            <div class="gallery-item">
+                <img src="./images/African orphans playing with an orphanage background.png" alt="Children Playing">
+                <div class="overlay">Children Playing</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/African orphans eating lunch.png" alt="Children Playing">
+                <div class="overlay">Lunch time</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/African orphans eating lunch.png" alt="Children Playing">
+                <div class="overlay">Time to Learn</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/African orphans eating lunch.png" alt="Children Playing">
+                <div class="overlay">Party Time.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/African orphans eating lunch.png" alt="Children Playing">
+                <div class="overlay">Children Playing</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/African orphans playing with an orphanage background.png" alt="Children Playing">
+                <div class="overlay">Children Playing</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/African orphans playing with an orphanage background.png" alt="Children Playing">
+                <div class="overlay">Children Playing</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/African orphans playing with an orphanage background.png" alt="Children Playing">
+                <div class="overlay">Children Playing</div>
+            </div>
+            <div id="lightbox" class="lightbox">
+                <img src="" alt="" id="lightbox-img">
+            </div>
+            </div>
+        </div> 
+    </section>
+    
+    <!-- Donations -->
+
+    <section id="donations">
+        <div class="donate">
+            <h1>Make a Difference in a Child's Life.</h1>
+            <p>Your generosity can provide hope and suppport to childeren in need.</p>
+            <!-- <button class="donate-now"><a href="#form">Donate Now</a></button> -->
+            <a href="#form" class="donate-now">Donate Now</a>
+        </div>
+
+        <div class="impact">
+            <h2>Your Impact</h2>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h3>$25</h3>
+                    <p>Provides school supplies for one child</p>
+                </div>
+                <div class="impact-item">
+                    <h3>$50</h3>
+                    <p>Offers meals for a week to a child.</p>
+                </div>
+                <div class="impact-item">
+                    <h3>$100</h3>
+                    <p>Supports educational programs for a month.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="donation-form" id="form">
+            <h2>Donate Now</h2>
+            <form action="">
+                <label for="amount">Donation Amount</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="doe@example.com" required>
+
+                <button type="submit">Donate</button>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- Volunteer Page  -->
+
+    <section id="volunteer"></section>
+
+
+
+
+
+
+<script>
+
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = item.src;
+        });
+    });
+
+    lightbox.addEventListener('click', ()=> {
+        lightbox.style.display = 'none';
+    });
+
+</script>
+
+
+</body>
+</html>
